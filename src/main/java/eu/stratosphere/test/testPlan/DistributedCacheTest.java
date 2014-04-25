@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.util.LinkedList;
 import java.util.List;
 
+import eu.stratosphere.api.common.JobExecutionResult;
 import eu.stratosphere.api.common.Plan;
 import eu.stratosphere.api.common.cache.DistributedCache;
 import eu.stratosphere.api.common.operators.FileDataSink;
@@ -15,8 +16,6 @@ import eu.stratosphere.api.java.record.io.TextInputFormat;
 import eu.stratosphere.api.java.record.operators.MapOperator;
 import eu.stratosphere.client.LocalExecutor;
 import eu.stratosphere.configuration.Configuration;
-import eu.stratosphere.nephele.client.JobExecutionResult;
-import eu.stratosphere.types.IntValue;
 import eu.stratosphere.types.Record;
 import eu.stratosphere.types.StringValue;
 import eu.stratosphere.util.Collector;
