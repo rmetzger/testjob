@@ -7,6 +7,7 @@ import java.util.List;
 
 import eu.stratosphere.api.common.JobExecutionResult;
 import eu.stratosphere.api.common.Plan;
+import eu.stratosphere.api.common.Program;
 import eu.stratosphere.api.common.cache.DistributedCache;
 import eu.stratosphere.api.common.operators.FileDataSink;
 import eu.stratosphere.api.common.operators.FileDataSource;
@@ -26,7 +27,7 @@ import eu.stratosphere.util.Collector;
  * @author robert
  *
  */
-public class DistributedCacheTest {
+public class DistributedCacheTest implements Program  {
 	private static final long serialVersionUID = 1L;
 
 	public static class PoorJoin extends MapFunction {
