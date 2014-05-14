@@ -29,3 +29,7 @@ git checkout origin/$GIT_BRANCH
 echo "building stratosphere"
 $MVN_BIN clean install -DskipTests -Dmaven.javadoc.skip=true $CUSTOM_STRATOSPHERE_MVN
 
+cd $FILES_DIRECTORY
+mkdir stratosphere-build
+cp -r stratosphere/stratosphere-dist/target/stratosphere-dist-*-bin/stratosphere-*/* stratosphere-build
+
