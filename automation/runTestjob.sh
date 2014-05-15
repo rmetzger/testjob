@@ -38,6 +38,7 @@ $STRATOSPHERE_BUILD_HOME"/bin/stratosphere" run -j $TESTJOB_HOME"/target/testjob
 	$HDFS_TESTJOB/orders.avro \
 	sequenceFileTestIsCurrentlyNotActivated \
 	$HDFS_TESTJOB_OUT \
-	10000
+	10000 \
+	$DOP
 
 
