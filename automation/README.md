@@ -7,6 +7,24 @@ Understand that I'm following a requirements-based development process.
 It is likely that a special corner case is not covered, our that my use case is actually a corner case.
 Anyways, please let me know if something is missing for you or make a pull request.
 
+# Required applications
+- bash
+- git
+- maven 3
+
+for wordcount data:
+- aspell
+- ruby
+- iconv
+
+for tpch:
+- make
+- a c compiler (gcc)
+
+```
+sudo apt-get install git maven aspell ruby make
+```
+
 # Execution Order 
 
 ```

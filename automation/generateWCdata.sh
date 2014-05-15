@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 LINES=$1
 if [[ -z "$LINES" ]]; then

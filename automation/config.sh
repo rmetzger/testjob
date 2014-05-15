@@ -9,7 +9,7 @@ GIT_BRANCH=variousFixes
 TESTJOB_REPO=https://github.com/rmetzger/testjob.git
 TESTJOB_BRANCH=testAutomation
 
-YARN=true
+YARN=false
 YARN_SESSION_CONF="-n 2 -jm 500 -tm 500"
 
 # has to be a absolute path!

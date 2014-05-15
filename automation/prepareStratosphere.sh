@@ -4,6 +4,7 @@ echo "Preparing the work environment"
 
 . ./config.sh
 
+INITIAL=`pwd`
 echo "checking if FILES_DIRECTORY exists"
 if [[ ! -e $FILES_DIRECTORY ]]; then
 	mkdir $FILES_DIRECTORY;
@@ -40,4 +41,5 @@ else
 	cp -r stratosphere/stratosphere-dist/target/stratosphere-dist-*-bin/stratosphere-*/* stratosphere-build
 fi
 
+cd INITIAL
 cp str-conf/* $FILES_DIRECTORY/stratosphere-build/conf/
