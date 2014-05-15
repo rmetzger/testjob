@@ -27,9 +27,17 @@ echo "Running testjob"
 # outputTableDirectory = args[7];
 # maxBulkIterations = Integer.valueOf(args[8]);
 
-ARGS="a"
-echo "running testjob with args $ARGS"
+echo "running testjob"
 $STRATOSPHERE_BUILD_HOME"/bin/stratosphere" run -j $TESTJOB_HOME"/target/testjob-*.jar" \
-	-c eu.stratosphere.test.testPlan.LargeTestPlan
-	-a $ARGS
+	-c eu.stratosphere.test.testPlan.LargeTestPlan \
+	$HDFS_TESTJOB/customer.tbl \
+	$HDFS_TESTJOB/lineitem.tbl \
+	$HDFS_TESTJOB/nation.tbl \
+	$HDFS_TESTJOB/orders.tbl \
+	$HDFS_TESTJOB/region.tbl \
+	$HDFS_TESTJOB/orders.avro \
+	sequenceFileTestIsCurrentlyNotActivated \
+	$HDFS_TESTJOB_OUT \
+	10000
+
 

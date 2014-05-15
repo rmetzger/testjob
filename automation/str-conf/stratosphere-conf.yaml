@@ -57,7 +57,7 @@ jobmanager.web.history: 5
 #taskmanager.rpc.port: 6122
 
 # JVM heap size in MB
-taskmanager.heap.mb: 512
+taskmanager.heap.mb: 5000
 
 # Directories for temporary files. Add a delimited list for multiple directories, using the system directory delimiter
 # (colon ':' on unix) or a comma character ','. An example would be /data1/tmp:/data2/tmp:/data3/tmp or

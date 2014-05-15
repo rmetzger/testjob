@@ -33,4 +33,4 @@ cd $FILES_DIRECTORY
 mkdir stratosphere-build
 cp -r stratosphere/stratosphere-dist/target/stratosphere-dist-*-bin/stratosphere-*/* stratosphere-build
 
-cp str-conf/* stratosphere-build/config/
+cp str-conf/* $FILES_DIRECTORY/stratosphere-build/conf/
