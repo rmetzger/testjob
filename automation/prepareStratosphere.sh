@@ -30,7 +30,14 @@ echo "building stratosphere"
 $MVN_BIN clean install -DskipTests -Dmaven.javadoc.skip=true $CUSTOM_STRATOSPHERE_MVN
 
 cd $FILES_DIRECTORY
-mkdir stratosphere-build
-cp -r stratosphere/stratosphere-dist/target/stratosphere-dist-*-bin/stratosphere-*/* stratosphere-build
+
+if [[ $YARN == "true" ]]; then
+	cp -r stratosphere/stratosphere-dist/target/*yarn.tar.gz .
+	tar xzf *yarn.tar.gz
+	mv stratosphere-yarn-* stratosphere-build
+else
+	mkdir stratosphere-build
+	cp -r stratosphere/stratosphere-dist/target/stratosphere-dist-*-bin/stratosphere-*/* stratosphere-build
+fi
 
 cp str-conf/* $FILES_DIRECTORY/stratosphere-build/conf/

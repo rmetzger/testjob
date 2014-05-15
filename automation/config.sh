@@ -9,6 +9,9 @@ GIT_BRANCH=variousFixes
 TESTJOB_REPO=https://github.com/rmetzger/testjob.git
 TESTJOB_BRANCH=testAutomation
 
+YARN=true
+YARN_SESSION_CONF="-n 2 -jm 500 -tm 500"
+
 # has to be a absolute path!
 FILES_DIRECTORY=`pwd`/workdir
 HDFS_WORKING_DIRECTORY=file:///tmp/stratosphere-tests
@@ -18,6 +21,9 @@ MVN_BIN=mvn
 
 #custom mvn flags (most likely -Dhadoop.profile=2 )
 CUSTOM_STRATOSPHERE_MVN=""
+if [[ $YARN == "true" ]]; then
+	CUSTOM_STRATOSPHERE_MVN=" -Dhadoop.profile=2 "
+fi
 
 HADOOP_BIN="/home/robert/Projekte/ozone/work/hadoop-2.3.0/bin/hadoop"
 
