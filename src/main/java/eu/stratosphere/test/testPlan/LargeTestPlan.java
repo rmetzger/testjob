@@ -181,7 +181,7 @@ public class LargeTestPlan implements Program, ProgramDescription {
 	public Plan getPlan(String... args) {
 
 		if (args.length < 9 && customer == null) {
-			this.getDescription();
+			System.err.println(this.getDescription());
 			return null;
 		} else if (args.length == 9) {
 			customer = args[0];

@@ -1,9 +1,11 @@
 
 # This is a simple bash file containing configuration values as variables
 
+# the repo must be called stratosphere
 GIT_REPO=https://github.com/stratosphere/stratosphere.git
-GIT_BRANCH=master
+GIT_BRANCH=variousFixes
 
+# the repo must be called testjob
 TESTJOB_REPO=https://github.com/rmetzger/testjob.git
 TESTJOB_BRANCH=testAutomation
 
@@ -19,14 +21,18 @@ CUSTOM_STRATOSPHERE_MVN=""
 
 HADOOP_BIN="/home/robert/Projekte/ozone/work/hadoop-2.3.0/bin/hadoop"
 
+# General Stuff
+DOP=8
+
+# Wordcount stuff.
 FILES_WC_GEN=$FILES_DIRECTORY"/wc-data/generated-wc.txt"
-
-
-
 HDFS_WC=$HDFS_WORKING_DIRECTORY"/wc-in"
 HDFS_WC_OUT=$HDFS_WORKING_DIRECTORY"/wc-out-"$RAND
 
+# Directories
 STRATOSPHERE_BUILD_HOME=$FILES_DIRECTORY"/stratosphere-build"
+TESTJOB_HOME=$FILES_DIRECTORY"/testjob"
 
-DOP=8
+TESTJOB_DATA=$FILES_DIRECTORY"/testjob-data"
+HDFS_TESTJOB=$HDFS_WORKING_DIRECTORY"/testjob-in"
 
