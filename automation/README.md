@@ -18,4 +18,6 @@ nano config.sh
 ./uploadToHdfs.sh
 ./startStratosphere.sh
 
+# now you can run a job
+./runWC.sh
 ```

@@ -10,19 +10,23 @@ TESTJOB_BRANCH=testAutomation
 # has to be a absolute path!
 FILES_DIRECTORY=`pwd`/workdir
 HDFS_WORKING_DIRECTORY=file:///tmp/stratosphere-tests
+RAND=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 12 | head -n 1`
 
 MVN_BIN=mvn
 
 #custom mvn flags (most likely -Dhadoop.profile=2 )
 CUSTOM_STRATOSPHERE_MVN=""
 
-HADOOP_BIN="/media/Store/data/Projekte/hadoop-2.4.0/bin/hadoop"
+HADOOP_BIN="/home/robert/Projekte/ozone/work/hadoop-2.3.0/bin/hadoop"
 
 FILES_WC_GEN=$FILES_DIRECTORY"/wc-data/generated-wc.txt"
 
+
+
 HDFS_WC=$HDFS_WORKING_DIRECTORY"/wc-in"
+HDFS_WC_OUT=$HDFS_WORKING_DIRECTORY"/wc-out-"$RAND
 
 STRATOSPHERE_BUILD_HOME=$FILES_DIRECTORY"/stratosphere-build"
 
-
+DOP=8
 
