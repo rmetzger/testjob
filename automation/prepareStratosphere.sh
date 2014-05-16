@@ -41,5 +41,5 @@ else
 	cp -r stratosphere/stratosphere-dist/target/stratosphere-dist-*-bin/stratosphere-*/* stratosphere-build
 fi
 
-cd INITIAL
+cd $INITIAL
 cp str-conf/* $FILES_DIRECTORY/stratosphere-build/conf/
