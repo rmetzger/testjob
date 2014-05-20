@@ -25,6 +25,8 @@ if [[ $YARN == "true" ]]; then
 	CUSTOM_STRATOSPHERE_MVN=" -Dhadoop.profile=2 "
 fi
 
+CUSTOM_TESTJOB_MVN=""
+
 HADOOP_BIN="hadoop"
 
 # General Stuff
