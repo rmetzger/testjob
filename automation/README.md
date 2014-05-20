@@ -30,6 +30,9 @@ sudo apt-get install git maven aspell ruby make
 ```
 cp configDefaults.sh config.sh
 #set values here
+cd str-conf
+# edit the configuration files for Stratosphere and remove the '.template' extension
+cd ..
 nano config.sh
 ./prepareStratosphere.sh
 ./prepareTestjob.sh
