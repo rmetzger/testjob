@@ -25,7 +25,7 @@
 	</repositories>
 
 	<properties>
-		<stratosphere.version>0.5-SNAPSHOT</stratosphere.version>
+		<stratosphere.version>0.6-SNAPSHOT</stratosphere.version>
 	</properties>
 
 	<dependencies>
@@ -94,6 +94,11 @@
 			<version>4.7</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-examples</artifactId>
+			<version>1.2.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

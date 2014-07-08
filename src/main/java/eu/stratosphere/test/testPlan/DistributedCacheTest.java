@@ -9,6 +9,7 @@ import eu.stratosphere.api.common.JobExecutionResult;
 import eu.stratosphere.api.common.Plan;
 import eu.stratosphere.api.common.Program;
 import eu.stratosphere.api.common.cache.DistributedCache;
+import eu.stratosphere.api.common.cache.DistributedCache.DistributedCacheEntry;
 import eu.stratosphere.api.java.record.functions.MapFunction;
 import eu.stratosphere.api.java.record.io.CsvOutputFormat;
 import eu.stratosphere.api.java.record.io.TextInputFormat;
@@ -71,7 +72,7 @@ public class DistributedCacheTest implements Program  {
 		
 		Plan plan = new Plan(out, "DistCacheTest");
 		try {
-			plan.registerCachedFile(args[1], "cacheFile");
+			plan.registerCachedFile(args[1], new DistributedCacheEntry("cacheFile", false) );
 		} catch (Exception e) {
 			e.printStackTrace(); 
 		}
