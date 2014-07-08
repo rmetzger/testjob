@@ -15,9 +15,9 @@ import eu.stratosphere.api.common.Program;
 import eu.stratosphere.api.common.accumulators.AccumulatorHelper;
 import eu.stratosphere.api.java.record.operators.MapOperator;
 import eu.stratosphere.client.LocalExecutor;
-import eu.stratosphere.hadoopcompatibility.HadoopDataSink;
-import eu.stratosphere.hadoopcompatibility.HadoopDataSource;
-import eu.stratosphere.hadoopcompatibility.datatypes.WritableWrapperConverter;
+import eu.stratosphere.hadoopcompatibility.mapred.record.HadoopDataSink;
+import eu.stratosphere.hadoopcompatibility.mapred.record.HadoopDataSource;
+import eu.stratosphere.hadoopcompatibility.mapred.record.datatypes.WritableWrapperConverter;
 import eu.stratosphere.test.testPlan.LargeTestPlan.CheckHadoop;
 import eu.stratosphere.test.testPlan.LargeTestPlan.CheckHadoopWrapper;
 

@@ -12,9 +12,10 @@ import eu.stratosphere.api.common.accumulators.AccumulatorHelper;
 import eu.stratosphere.api.java.record.io.TextInputFormat;
 import eu.stratosphere.api.java.record.operators.FileDataSource;
 import eu.stratosphere.client.LocalExecutor;
-import eu.stratosphere.hadoopcompatibility.HadoopDataSink;
+import eu.stratosphere.hadoopcompatibility.mapred.record.HadoopDataSink;
 
 public class DeflateWriterJob implements Program {
+	private static final long serialVersionUID = 1L;
 
 	public Plan getPlan(String... args) {
 		String inputPath = args[0];
